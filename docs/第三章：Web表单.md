@@ -154,7 +154,7 @@ def login():
 
 此时，你可以验证结果了。运行该应用，在浏览器的地址栏中输入`http://localhost:5000/`，然后点击顶部导航栏中的“Login”链接来查看新的登录表单。 是不是非常炫酷？
 
-![Login Form](http://upload-images.jianshu.io/upload_images/4961528-6d1753699807685a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![登录表单](http://upload-images.jianshu.io/upload_images/4961528-6d1753699807685a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 接收表单数据
 
