@@ -11,3 +11,4 @@
 * [第五章：用户登录](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e4%ba%94%e7%ab%a0%ef%bc%9a%e7%94%a8%e6%88%b7%e7%99%bb%e5%bd%95.md)
 * [第六章：个人主页和头像](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e5%85%ad%e7%ab%a0%ef%bc%9a%e4%b8%aa%e4%ba%ba%e4%b8%bb%e9%a1%b5%e5%92%8c%e5%a4%b4%e5%83%8f.md)
 * [第七章：错误处理](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86.md)
+* [第八章：粉丝](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e5%85%ab%e7%ab%a0%ef%bc%9a%e7%b2%89%e4%b8%9d.md)
