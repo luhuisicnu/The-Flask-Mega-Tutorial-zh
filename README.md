@@ -17,3 +17,4 @@
 * [第十一章：美化](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e5%8d%81%e4%b8%80%e7%ab%a0%ef%bc%9a%e7%be%8e%e5%8c%96.md)
 * [第十二章：日期和时间](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0%EF%BC%9A%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4.md)
 * [第十三章：国际化和本地化](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e5%8d%81%e4%b8%89%e7%ab%a0%ef%bc%9a%e5%9b%bd%e9%99%85%e5%8c%96%e5%92%8c%e6%9c%ac%e5%9c%b0%e5%8c%96.md)
+* [第十四章：Ajax](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e5%8d%81%e5%9b%9b%e7%ab%a0%ef%bc%9aAjax.md)
