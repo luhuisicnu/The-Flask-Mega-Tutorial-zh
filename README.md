@@ -19,3 +19,4 @@
 * [第十三章：国际化和本地化](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e5%8d%81%e4%b8%89%e7%ab%a0%ef%bc%9a%e5%9b%bd%e9%99%85%e5%8c%96%e5%92%8c%e6%9c%ac%e5%9c%b0%e5%8c%96.md)
 * [第十四章：Ajax](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e5%8d%81%e5%9b%9b%e7%ab%a0%ef%bc%9aAjax.md)
 * [第十五章：优化应用结构](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e5%8d%81%e4%ba%94%e7%ab%a0%ef%bc%9a%e4%bc%98%e5%8c%96%e5%ba%94%e7%94%a8%e7%bb%93%e6%9e%84.md)
+* [第十六章：全文搜索](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e5%8d%81%e5%85%ad%e7%ab%a0%ef%bc%9a%e5%85%a8%e6%96%87%e6%90%9c%e7%b4%a2.md)
