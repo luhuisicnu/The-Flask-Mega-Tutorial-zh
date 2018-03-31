@@ -20,3 +20,4 @@
 * [第十四章：Ajax](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e5%8d%81%e5%9b%9b%e7%ab%a0%ef%bc%9aAjax.md)
 * [第十五章：优化应用结构](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e5%8d%81%e4%ba%94%e7%ab%a0%ef%bc%9a%e4%bc%98%e5%8c%96%e5%ba%94%e7%94%a8%e7%bb%93%e6%9e%84.md)
 * [第十六章：全文搜索](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e5%8d%81%e5%85%ad%e7%ab%a0%ef%bc%9a%e5%85%a8%e6%96%87%e6%90%9c%e7%b4%a2.md)
+* [第十七章：Linux上的部署](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%E7%AC%AC%E5%8D%81%E4%B8%83%E7%AB%A0%EF%BC%9ALinux%E4%B8%8A%E7%9A%84%E9%83%A8%E7%BD%B2.md)
