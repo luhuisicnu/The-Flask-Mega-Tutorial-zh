@@ -93,7 +93,7 @@ Heroku平台与其他部署平台不同之处在于它在虚拟化平台上运�
 
 ## 使用Heroku Postgres数据库
 
-为了解决第一个问题，我将切换到不同的数据库引擎。 在[第17章](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%E7%AC%AC%E5%8D%81%E4%B8%83%E7%AB%A0%EF%BC%9ALinux%E4%B8%8A%E7%9A%84%E9%83%A8%E7%BD%B2.md)中，你看到我使用MySQL数据库为Ubuntu部署添加健壮性。 Heroku基于Postgres数据库提供了自己的数据库产品，因此我将转而使用它来避免使用基于文件的SQLite。
+为了解决第一个问题，我将切换到不同的数据库引擎。 在[第十七章](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%E7%AC%AC%E5%8D%81%E4%B8%83%E7%AB%A0%EF%BC%9ALinux%E4%B8%8A%E7%9A%84%E9%83%A8%E7%BD%B2.md)中，你看到我使用MySQL数据库为Ubuntu部署添加健壮性。 Heroku基于Postgres数据库提供了自己的数据库产品，因此我将转而使用它来避免使用基于文件的SQLite。
 
 Heroku应用的数据库使用相同的Heroku CLI进行设置。 在本章中，我将创建一个免费级别的数据库：
 
