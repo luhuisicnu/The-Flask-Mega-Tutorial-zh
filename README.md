@@ -22,3 +22,4 @@
 * [第十六章：全文搜索](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e5%8d%81%e5%85%ad%e7%ab%a0%ef%bc%9a%e5%85%a8%e6%96%87%e6%90%9c%e7%b4%a2.md)
 * [第十七章：Linux上的部署](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%E7%AC%AC%E5%8D%81%E4%B8%83%E7%AB%A0%EF%BC%9ALinux%E4%B8%8A%E7%9A%84%E9%83%A8%E7%BD%B2.md)
 * [第十八章：Heroku上的部署](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%E7%AC%AC%E5%8D%81%E5%85%AB%E7%AB%A0%EF%BC%9AHeroku%E4%B8%8A%E7%9A%84%E9%83%A8%E7%BD%B2.md)
+* [第十九章：Docker容器上的部署](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e5%8d%81%e4%b9%9d%e7%ab%a0%ef%bc%9aDocker%e5%ae%b9%e5%99%a8%e4%b8%8a%e7%9a%84%e9%83%a8%e7%bd%b2.md)
