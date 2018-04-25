@@ -24,3 +24,4 @@
 * [第十八章：Heroku上的部署](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%E7%AC%AC%E5%8D%81%E5%85%AB%E7%AB%A0%EF%BC%9AHeroku%E4%B8%8A%E7%9A%84%E9%83%A8%E7%BD%B2.md)
 * [第十九章：Docker容器上的部署](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e5%8d%81%e4%b9%9d%e7%ab%a0%ef%bc%9aDocker%e5%ae%b9%e5%99%a8%e4%b8%8a%e7%9a%84%e9%83%a8%e7%bd%b2.md)
 * [第二十章：加点JavaScript魔法](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e4%ba%8c%e5%8d%81%e7%ab%a0%ef%bc%9a%e5%8a%a0%e7%82%b9JavaScript%e9%ad%94%e6%b3%95.md)
+* [第二十一章：用户通知](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e4%ba%8c%e5%8d%81%e4%b8%80%e7%ab%a0%ef%bc%9a%e7%94%a8%e6%88%b7%e9%80%9a%e7%9f%a5.md)
