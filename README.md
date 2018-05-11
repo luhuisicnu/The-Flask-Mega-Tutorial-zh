@@ -3,6 +3,9 @@
 
 全部二十三章都已完成翻译，如果有任何版权问题，请联系luhuisicnu@163.com。
 
+如果有任何技术疑问，欢迎加入QQ群（484327418）讨论。
+
+
 ## 目录
 * [第一章：Hello, World!](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9AHello%2C%20World!.md)
 * [第二章：模板](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E6%A8%A1%E6%9D%BF.md)
