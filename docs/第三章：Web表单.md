@@ -42,11 +42,12 @@ class Config(object):
 
 简单的不像话，有没有？ 配置设置被定义为`Config`类中的属性。 一旦应用程序需要更多配置选项，直接依样画葫芦，附加到这个类上即可，稍后如果我发现需要多个配置集，则可以创建它的子类。现在则不用操心。
 
-`SECRET_KEY`是我添加的唯一配置选项，对大多数Flask应用来说，它都是极其重要的。Flask及其一些扩展使用密钥的值作为加密密钥，用于生成签名或令牌。Flask-WTF插件使用它来保护网页表单免受名为[Cross-Site Request Forgery](http://en.wikipedia.org/wiki/Cross-site_request_forgery)或CSRF（发音为“seasurf”）的恶意攻击。顾名思义，密钥应该是隐密的，因为由它产生的令牌和签名的加密强度保证，取决于除了可信维护者之外，没有任何人能够获得它。
+`SECRET_KEY`是我添加的唯一配置选项，对大多数Flask应用来说，它都是极其重要的。Flask及其一些扩展使用密钥的值作为加密密钥，用于生成签名或令牌。Flask-WTF插件使用它来保护网页表单免受名为[Cross-Site Request Forgery](http://en.wikipedia.org/wiki/Cross-site_request_forgery)或CSRF（发音为“sea-surf”）的恶意攻击。顾名思义，密钥应该是隐密的，因为由它产生的令牌和签名的加密强度保证，取决于除了可信维护者之外，没有任何人能够获得它。
 
 密钥被定义成由`or`运算符连接两个项的表达式。第一个项查找环境变量`SECRET_KEY`的值，第二个项是一个硬编码的字符串。这种首先检查环境变量中是否存在这个配置，找不到的情况下就使用硬编码字符串的配置变量的模式你将会反复看到。在开发阶段，安全性要求较低，因此可以直接使用硬编码字符串。但是，当应用部署到生产服务器上的时候，我将设置一个独一无二且难以揣摩的环境变量，这样，服务器就拥有了一个别人未知的安全密钥了。
 
-拥有了这样一份配置文件，我还需要通知Flask读取并使用它。可以在生成Flask应用之后，利用`app.config.from_object()`方法来完成这个操作：
+拥有了这样一份配置文件，我还需要通知Flask读取并使用它。可以在生成Flask应用之后(译者注,在 `__init__.py` 文件中)，利用`app.config.from_object()`方法来完成这个操作：
+
 ```
 from flask import Flask
 from config import Config
@@ -121,7 +122,7 @@ HTML`<form>`元素被用作Web表单的容器。 表单的`action`属性告诉�
 
 `form.hidden_tag()`模板参数生成了一个隐藏字段，其中包含一个用于保护表单免受CSRF攻击的`token`。 对于保护表单，你需要做的所有事情就是在模板中包括这个隐藏的字段，并在Flask配置中定义`SECRET_KEY`变量，Flask-WTF会完成剩下的工作。
 
-如果你以前编写过HTML Web表单，那么你会发现一个奇怪的现象——在此模板中没有HTML表单元素，这是因为表单的字段对象的在渲染时会自动转化为HTML元素。 我只需在需要字段标签的地方加上`{{ form.<field_name>.label }}`，需要这个字段的地方加上`{{ form.<field_name>() }}`。 对于需要附加HTML属性的字段，可以作为关键字参数传递到函数中。 此模板中的username和password字段将`size`作为参数，将其作为属性添加到`<input>` HTML元素中。 你页也可以通过这种手段为表单字段设置class和id属性。
+如果你以前编写过HTML Web表单，那么你会发现一个奇怪的现象——在此模板中没有HTML表单元素，这是因为表单的字段对象的在渲染时会自动转化为HTML元素。 我只需在需要字段标签的地方加上`{{ form.<field_name>.label }}`，需要这个字段的地方加上`{{ form.<field_name>() }}`。 对于需要附加HTML属性的字段，可以作为关键字参数传递到函数中。 此模板中的username和password字段将`size`作为参数，将其作为属性添加到`<input>` HTML元素中。 你也可以通过这种手段为表单字段设置class和id属性。
 
 ## 表单视图
 
@@ -227,7 +228,7 @@ def login():
 
 实际上，表单验证器已经生成了这些描述性错误消息，所缺少的不过是模板中的一些额外的逻辑来渲染它们。
 
-这是给username和password字段添加了验证描述性错误消息渲染逻辑之后的登录模板：
+这是给username和password字段添加了验证描述性错误消息渲染逻辑之后的登录模板(*templates/base.html*)：
 ```
 {% extends "base.html" %}
 
