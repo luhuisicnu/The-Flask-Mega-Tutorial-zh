@@ -121,7 +121,7 @@ HTML`<form>`元素被用作Web表单的容器。 表单的`action`属性告诉�
 
 `form.hidden_tag()`模板参数生成了一个隐藏字段，其中包含一个用于保护表单免受CSRF攻击的`token`。 对于保护表单，你需要做的所有事情就是在模板中包括这个隐藏的字段，并在Flask配置中定义`SECRET_KEY`变量，Flask-WTF会完成剩下的工作。
 
-如果你以前编写过HTML Web表单，那么你会发现一个奇怪的现象——在此模板中没有HTML表单元素，这是因为表单的字段对象的在渲染时会自动转化为HTML元素。 我只需在需要字段标签的地方加上`{{ form.<field_name>.label }}`，需要这个字段的地方加上`{{ form.<field_name>() }}`。 对于需要附加HTML属性的字段，可以作为关键字参数传递到函数中。 此模板中的username和password字段将`size`作为参数，将其作为属性添加到`<input>` HTML元素中。 你页也可以通过这种手段为表单字段设置class和id属性。
+如果你以前编写过HTML Web表单，那么你会发现一个奇怪的现象——在此模板中没有HTML表单元素，这是因为表单的字段对象的在渲染时会自动转化为HTML元素。 我只需在需要字段标签的地方加上`{{ form.<field_name>.label }}`，需要这个字段的地方加上`{{ form.<field_name>() }}`。 对于需要附加HTML属性的字段，可以作为关键字参数传递到函数中。 此模板中的username和password字段将`size`作为参数，将其作为属性添加到`<input>` HTML元素中。 你也可以通过这种手段为表单字段设置class和id属性。
 
 ## 表单视图
 
