@@ -31,7 +31,6 @@ Heroku提供不同的服务级别，允许你自主选择为应用程序提供�
 ## 安装Heroku命令行客户端
 
 Heroku提供了一个名为[Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)的命令行工具来与服务交互，可安装于Windows，Mac OS X和Linux。 该文档包括了支持的所有平台的安装说明。 如果你计划部署应用程序以测试该服务，请将其安装在你的系统上。
-Heroku provides a command-line tool for interacting with their service called [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli), available for Windows, Mac OS X and Linux. The documentation includes installation instructions for all the supported platforms. Go ahead and install it on your system if you plan on deploying the application to test the service.
 
 安装CLI后应该做的第一件事是登录到你的Heroku帐户：
 
