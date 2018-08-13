@@ -97,7 +97,7 @@ class LoginForm(FlaskForm):
 
 {% block content %}
     <h1>Sign In</h1>
-    <form action="" method="post">
+    <form action="" method="post" novalidate>
         {{ form.hidden_tag() }}
         <p>
             {{ form.username.label }}<br>
@@ -233,7 +233,7 @@ def login():
 
 {% block content %}
     <h1>Sign In</h1>
-    <form action="" method="post">
+    <form action="" method="post" novalidate>
         {{ form.hidden_tag() }}
         <p>
             {{ form.username.label }}<br>
