@@ -9,8 +9,8 @@
 
 1. 小额捐助
 
-![微信捐助](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/tree/master/images/weixin_contribute.jpg)
-![支付宝捐助](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/tree/master/images/zhufubao_contribute.jpg)
+![微信捐助](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/images/weixin_contribute.jpg)
+![支付宝捐助](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/images/zhufubao_contribute.jpg)
 
 2. 提交pull requests
 
