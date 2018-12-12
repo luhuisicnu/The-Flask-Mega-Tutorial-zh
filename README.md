@@ -7,16 +7,11 @@
 
 如果您认为从本教程中有所收获，并且乐意捐助，协助译者持续维护和创作，可通过如下方式：
 
-1. 小额捐助
-
-![微信捐助](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/images/weixin_contribute.jpg)
-![支付宝捐助](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/images/zhifubao_contribute.jpg)
-
-2. 提交pull requests
+1. 提交pull requests
 
 欢迎大家共同对译文进行勘误和原文更新部分的添加。
 
-3. 分享传播
+2. 分享传播
 
 欢迎大家分享本教程给更多人，一起讨论学习和提高。
 
