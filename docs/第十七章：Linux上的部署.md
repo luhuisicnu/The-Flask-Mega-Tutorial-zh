@@ -80,14 +80,14 @@ $ su ubuntu
 
 现在我要配置这个新的`ubuntu`帐户来使用[public key](http://en.wikipedia.org/wiki/Public-key_cryptography)认证，以便你可以免密登录。
 
-先不管服务器上打开的终端会话，然后在本地计算机上启动第二个终端。 如果你使用的是Windows，这需要是可以访问`ssh`命令的终端，所以它可能是一个`bash`或者类似的提示符的终端，而不是本地的Windows终端。 在该终端会话中，检查*~/.ssh*目录的内容：
+先不管服务器上打开的终端会话，然后在本地计算机上启动第二个终端。 如果你使用的是Windows，这需要是可以访问`ssh`命令的终端，所以它可能是一个`bash`或者类似的提示符的终端，而不是本地的Windows终端。 在该终端会话中，检查 *~/.ssh* 目录的内容：
 
 ```
 $ ls ~/.ssh
 id_rsa  id_rsa.pub
 ```
 
-如果目录列表显示如上所述的名为*id_rsa*和*id_rsa.pub*的文件，那么你已经有一个密钥。 如果没有这两个文件，或者根本没有*~/.ssh*目录，则你需要运行以下命令（也是OpenSSH工具集的一部分）来创建SSH密钥对：
+如果目录列表显示如上所述的名为*id_rsa*和*id_rsa.pub*的文件，那么你已经有一个密钥。 如果没有这两个文件，或者根本没有 *~/.ssh* 目录，则你需要运行以下命令（也是OpenSSH工具集的一部分）来创建SSH密钥对：
 
 ```
 $ ssh-keygen
@@ -125,7 +125,7 @@ $ ssh ubuntu@<server-ip-address>
 
 为了最大限度地降低服务器受到攻击的风险，你可以采取一些措施来关闭攻击者可能访问的大量潜在漏洞。
 
-我要做的第一个更改是禁用root用户通过SSH登录。 你现在可以无密码地访问`ubuntu`帐户，并且可以通过`sudo`从该帐户运行管理员命令，因此实际上不需要暴露root帐户。 要禁用root登录，你需要编辑服务器上的*/etc/ssh/sshd_config*文件。 你可能在你的服务器上安装了`vi`和`nano`文本编辑器，你可以用它来编辑文件（如果你不熟悉这两种文件编辑器，可以首先尝试`nano`）。 由于SSH配置对普通用户是不可访问的，所以你需要在编辑器命令前添加`sudo`（即`sudo vi /etc/ssh/sshd_config`）。 你需要更改此文件中的单行：
+我要做的第一个更改是禁用root用户通过SSH登录。 你现在可以无密码地访问`ubuntu`帐户，并且可以通过`sudo`从该帐户运行管理员命令，因此实际上不需要暴露root帐户。 要禁用root登录，你需要编辑服务器上的 */etc/ssh/sshd_config* 文件。 你可能在你的服务器上安装了`vi`和`nano`文本编辑器，你可以用它来编辑文件（如果你不熟悉这两种文件编辑器，可以首先尝试`nano`）。 由于SSH配置对普通用户是不可访问的，所以你需要在编辑器命令前添加`sudo`（即`sudo vi /etc/ssh/sshd_config`）。 你需要更改此文件中的单行：
 
 */etc/ssh/sshd_config*：禁止root登录。
 
@@ -135,7 +135,7 @@ PermitRootLogin no
 
 请注意，要进行此更改，你需要找到以`PermitRootLogin`开头的行（找不到就新建一行）并将该值更改为`no`。
 
-下一个更改在同一个文件中。 现在我要为所有帐户禁用密码登录。 你有一个无密码的登录设置，所以没有必要允许密码。 如果你对完全禁用密码感到紧张，可以跳过此更改，但对于生产服务器来说，这是一个非常好的主意，因为攻击者经常在所有服务器上尝试随机帐户名和密码并希望能中奖。 要禁用密码登录，请在*/etc/ssh/sshd_config*中更改以下行：
+下一个更改在同一个文件中。 现在我要为所有帐户禁用密码登录。 你有一个无密码的登录设置，所以没有必要允许密码。 如果你对完全禁用密码感到紧张，可以跳过此更改，但对于生产服务器来说，这是一个非常好的主意，因为攻击者经常在所有服务器上尝试随机帐户名和密码并希望能中奖。 要禁用密码登录，请在 */etc/ssh/sshd_config* 中更改以下行：
 
 */etc/ssh/sshd_config*：禁用密码登录。
 
@@ -212,7 +212,7 @@ $ source venv/bin/activate
 (venv) $ pip install gunicorn pymysql
 ```
 
-我需要创建一个*.env*文件，其中包含所有需要的环境变量：
+我需要创建一个 *.env* 文件，其中包含所有需要的环境变量：
 
 */home/ubuntu/microblog/.env*：环境配置。
 
@@ -224,7 +224,7 @@ DATABASE_URL=mysql+pymysql://microblog:<db-password>@localhost:3306/microblog
 MS_TRANSLATOR_KEY=<your-translator-key-here>
 ```
 
-这个*.env*文件与我在[第十五章](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e5%8d%81%e4%ba%94%e7%ab%a0%ef%bc%9a%e4%bc%98%e5%8c%96%e5%ba%94%e7%94%a8%e7%bb%93%e6%9e%84.md)展示的非常类似，但是我为SECRET_KEY使用了一个随机字符串。 为了生成这个随机字符串，我使用了下面的命令：
+这个 *.env* 文件与我在[第十五章](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e5%8d%81%e4%ba%94%e7%ab%a0%ef%bc%9a%e4%bc%98%e5%8c%96%e5%ba%94%e7%94%a8%e7%bb%93%e6%9e%84.md)展示的非常类似，但是我为SECRET_KEY使用了一个随机字符串。 为了生成这个随机字符串，我使用了下面的命令：
 
 ```
 python3 -c "import uuid; print(uuid.uuid4().hex)
@@ -232,7 +232,7 @@ python3 -c "import uuid; print(uuid.uuid4().hex)
 
 对于`DATABASE_URL`变量，我定义了一个MySQL URL。 我将在下一节中向你介绍如何配置数据库。
 
-我需要将`FLASK_APP`环境变量设置为应用程序的入口点以启用`flask`命令，但在解析*.env*文件之前需要此变量，因此需要手动设置。 为避免每次都设置它，我把它添加到`ubuntu`帐户的*~/.profile*文件的底部，以便每次登录时自动设置它：
+我需要将`FLASK_APP`环境变量设置为应用程序的入口点以启用`flask`命令，但在解析 *.env* 文件之前需要此变量，因此需要手动设置。 为避免每次都设置它，我把它添加到`ubuntu`帐户的 *~/.profile* 文件的底部，以便每次登录时自动设置它：
 
 ```
 $ echo "export FLASK_APP=microblog.py" >> ~/.profile
@@ -282,7 +282,7 @@ mysql> flush privileges;
 mysql> quit;
 ```
 
-你将需要用你选择的密码来替换`<db-password>`。 这将是`microblog`数据库用户的密码，所以不要使用你已为root用户选择的密码。 `microblog`用户的密码需要与你包含在*.env*文件中的`DATABASE_URL`变量中的密码相匹配。
+你将需要用你选择的密码来替换`<db-password>`。 这将是`microblog`数据库用户的密码，所以不要使用你已为root用户选择的密码。 `microblog`用户的密码需要与你包含在 *.env* 文件中的`DATABASE_URL`变量中的密码相匹配。
 
 如果你的数据库配置是正确的，你现在应该能够运行数据库迁移以创建所有的表：
 
@@ -310,7 +310,7 @@ mysql> quit;
 
 虽然gunicorn的设置非常简单，但从命令行运行服务器在生产服务器实际上不是一个恰当的方案。 我想要做的是让服务器在后台运行，并持续监视，因为如果由于某种原因导致服务器崩溃并退出，我想确保新的服务器自动启动以取代它。 而且我还想确保如果机器重新启动，服务器在启动时自动运行，而无需人工登录和启动。 我将使用上面安装的[supervisor](http://supervisord.org/)包来执行此操作。
 
-Supervisor使用配置文件定义它要监视什么程序以及如何在必要时重新启动它们。 配置文件必须存储在*/etc/supervisor/conf.d*中。 这是Microblog的配置文件，我将其称为*microblog.conf*：
+Supervisor使用配置文件定义它要监视什么程序以及如何在必要时重新启动它们。 配置文件必须存储在 */etc/supervisor/conf.d* 中。 这是Microblog的配置文件，我将其称为*microblog.conf*：
 
 */etc/supervisor/conf.d/microblog.conf*：Supervisor配置。
 
@@ -349,13 +349,13 @@ $ openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 \
 
 该命令将要求你提供关于应用程序和你自己的一些信息。 这些信息将包含在SSL证书中，如果用户请求查看它，Web浏览器则会向用户显示它们。上述命令的结果将是名为*key.pem*和*cert.pem*的两个文件，我将其放置在Microblog根目录的*certs*子目录中。
 
-要有一个由nginx服务的网站，你需要为它编写配置文件。 在大多数nginx安装中，这个文件需要位于*/etc/nginx/sites-enabled*目录中。Nginx在这个位置安装了一个我不需要的测试站点，所以我将首先删除它：
+要有一个由nginx服务的网站，你需要为它编写配置文件。 在大多数nginx安装中，这个文件需要位于 */etc/nginx/sites-enabled* 目录中。Nginx在这个位置安装了一个我不需要的测试站点，所以我将首先删除它：
 
 ```
 $ sudo rm /etc/nginx/sites-enabled/default
 ```
 
-下面你可以看到Microblog的nginx配置文件，它在*/etc/nginx/sites-enabled/microblog*中：
+下面你可以看到Microblog的nginx配置文件，它在 */etc/nginx/sites-enabled/microblog* 中：
 
 */etc/nginx/sites-enabled/microblog*：Nginx配置。
 
