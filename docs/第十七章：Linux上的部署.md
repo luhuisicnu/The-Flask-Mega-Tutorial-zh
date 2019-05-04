@@ -427,7 +427,7 @@ $ sudo service nginx reload
 (venv) $ sudo supervisorctl start microblog    # start a new server
 ```
 
-##树莓派托管
+## 树莓派托管
 
 [树莓派](http://www.raspberrypi.org/)是一款革命性低成本的小型Linux计算机，功耗非常低，因此它是托管家庭在线服务器的理想设备，可以全天候在线而无需捆绑你的台式电脑或笔记本电脑。 有几个Linux发行版可以在树莓派上运行。 我的选择是[Raspbian](http://www.raspbian.org/)，这是树莓派基金会的官方发行版。
 
