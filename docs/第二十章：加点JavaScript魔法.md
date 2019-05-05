@@ -69,8 +69,8 @@ def user_popup(username):
 
 ## Bootstrap Popover组件简介
 
-在[第十一章](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e5%8d%81%e4%b8%80%e7%ab%a0%ef%bc%9a%e7%be%8e%e5%8c%96.md)中，我向你介绍了可便捷地创建精美网页的Bootstrap框架。 到目前为止，我只使用了这个框架的一小部分。 Bootstrap捆绑了许多常见的UI元素，所有这些元素都在地址为 *https://getbootstrap.com* 的Bootstrap文档中有demo和示例。 其中一个组件是[Popover](https://getbootstrap.com/docs/3.3/javascript/#popovers)（弹窗），在文档中将其描述为“用于容纳辅助信息的小的覆盖窗口”。 这正是我需要的！
-　
+在[第十一章](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e5%8d%81%e4%b8%80%e7%ab%a0%ef%bc%9a%e7%be%8e%e5%8c%96.md)中，我向你介绍了可便捷地创建精美网页的Bootstrap框架。 到目前为止，我只使用了这个框架的一小部分。 Bootstrap捆绑了许多常见的UI元素，所有这些元素都在地址为 *https://getbootstrap.com* 的Bootstrap文档中有demo和示例。 其中一个组件是[Popover](https://getbootstrap.com/docs/3.3/javascript/#popovers)（弹窗），在文档中将其描述为“用于容纳辅助信息的小的覆盖窗口”。 这正是我需要的！  
+
 大多数bootstrap组件都是通过HTML标记定义的，该标记引用Bootstrap CSS的定义内容来添加漂亮的样式。 一些高级的组件还需要JavaScript。 应用程序在网页中包含这些组件的标准方式是在适当的位置添加HTML，然后为需要脚本支持的组件调用JavaScript函数，以便初始化或激活它。 popover组件确实需要JavaScript的支持。
 
 要做弹窗的HTML部分非常简单，你只需要定义将触发弹窗的元素。 就我而言，就是处理每条用户动态中出现的可点击的用户名。
