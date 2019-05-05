@@ -24,7 +24,7 @@ def user_popup(username):
     return render_template('user_popup.html', user=user)
 ```
 
-该路由将被附加到*/user/<username>/popup* URL，并且将简单地加载所请求的用户，然后渲染到模板中。 该模板是个人主页的简化版本：
+该路由将被附加到 */user/\<username\>/popup* URL，并且将简单地加载所请求的用户，然后渲染到模板中。 该模板是个人主页的简化版本：
 
 *app/templates/user_popup.html*：用户弹窗模板。
 
@@ -65,11 +65,11 @@ def user_popup(username):
 
 当用户将鼠标指针悬停在用户名上时，随后小节中编写的JavaScript代码将会调用此路由。客户端将服务器端返回的响应中的html内容显示在弹出窗口中。 当用户移开鼠标时，弹出窗口将被删除。 听起来很简单，对吧？
 
-如果你想了解弹窗像什么样，现在可以运行应用，跳转到任何用户的个人主页，然后在地址栏的URL中追加*/popup*以查看全屏版本的弹出窗口内容。
+如果你想了解弹窗像什么样，现在可以运行应用，跳转到任何用户的个人主页，然后在地址栏的URL中追加 */popup* 以查看全屏版本的弹出窗口内容。
 
 ## Bootstrap Popover组件简介
 
-在[第十一章](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e5%8d%81%e4%b8%80%e7%ab%a0%ef%bc%9a%e7%be%8e%e5%8c%96.md)中，我向你介绍了可便捷地创建精美网页的Bootstrap框架。 到目前为止，我只使用了这个框架的一小部分。 Bootstrap捆绑了许多常见的UI元素，所有这些元素都在地址为*https://getbootstrap.com*的Bootstrap文档中有demo和示例。 其中一个组件是[Popover](https://getbootstrap.com/docs/3.3/javascript/#popovers)（弹窗），在文档中将其描述为“用于容纳辅助信息的小的覆盖窗口”。 这正是我需要的！
+在[第十一章](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e5%8d%81%e4%b8%80%e7%ab%a0%ef%bc%9a%e7%be%8e%e5%8c%96.md)中，我向你介绍了可便捷地创建精美网页的Bootstrap框架。 到目前为止，我只使用了这个框架的一小部分。 Bootstrap捆绑了许多常见的UI元素，所有这些元素都在地址为 *https://getbootstrap.com* 的Bootstrap文档中有demo和示例。 其中一个组件是[Popover](https://getbootstrap.com/docs/3.3/javascript/#popovers)（弹窗），在文档中将其描述为“用于容纳辅助信息的小的覆盖窗口”。 这正是我需要的！
 　
 大多数bootstrap组件都是通过HTML标记定义的，该标记引用Bootstrap CSS的定义内容来添加漂亮的样式。 一些高级的组件还需要JavaScript。 应用程序在网页中包含这些组件的标准方式是在适当的位置添加HTML，然后为需要脚本支持的组件调用JavaScript函数，以便初始化或激活它。 popover组件确实需要JavaScript的支持。
 
@@ -117,7 +117,7 @@ jQuery JavaScript库作为Bootstrap的依赖项加载，因此我将利用它。
 
 回顾[第十四章](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e5%8d%81%e5%9b%9b%e7%ab%a0%ef%bc%9aAjax.md)，在实时翻译中被调用的HTML元素具有唯一的ID。 例如，ID = 123的用户动态中具有`id="post123"`属性。 然后使用jQuery，在JavaScript中使用表达式`$('#post123')`在DOM中定位此元素。 `$()`函数功能非常强大，并且具有相当复杂的查询语言来搜索DOM元素，可以参考[CSS Selectors](https://api.jquery.com/category/selectors/)。
 
-我用于翻译功能的选择器旨在使用`id`属性查找一个具有唯一标识符的特定元素。 识别元素的另一种方法是使用`class`属性，它可以分配给页面中的多个元素。 例如，我可以用`class="user_popup"`标记所有的用户链接，然后我可以通过`$('.user_popup')`获取这些元素的列表（CSS选择器中，`#`前缀代表查询id属性，'.'前缀代表查询class属性）。 在本处，返回值将是具有该类的所有元素的集合。
+我用于翻译功能的选择器旨在使用`id`属性查找一个具有唯一标识符的特定元素。 识别元素的另一种方法是使用`class`属性，它可以分配给页面中的多个元素。 例如，我可以用`class="user_popup"`标记所有的用户链接，然后我可以通过`$('.user_popup')`获取这些元素的列表（CSS选择器中，`#`前缀代表查询id属性，`.`前缀代表查询class属性）。 在本处，返回值将是具有该类的所有元素的集合。
 
 ## 弹窗和DOM元素
 
@@ -224,7 +224,7 @@ jQuery JavaScript库作为Bootstrap的依赖项加载，因此我将利用它。
 
 Ajax请求不是一个新话题了，因为我已经在[第十四章](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e5%8d%81%e5%9b%9b%e7%ab%a0%ef%bc%9aAjax.md)中已介绍过这个主题，来作为实时语言翻译功能。 当使用jQuery时，`$.ajax()`函数向服务器发送一个异步请求。
 
-我要发送到服务器的请求将具有类似*/user/<username>/popup*模式的URL，在本章开始时我已经将该URL添加到应用程序中。 这个请求的响应将包含我需要在弹出窗口中插入的HTML。
+我要发送到服务器的请求将具有类似 */user/\<username\>/popup* 模式的URL，在本章开始时我已经将该URL添加到应用程序中。 这个请求的响应将包含我需要在弹出窗口中插入的HTML。
 
 关于这个请求的直接问题是我需要知道包含在URL中的“username”的值是什么。 鼠标进入的事件处理函数是通用的，它将在页面中找到的所有用户链接，所以该函数需要从其上下文中确定用户名。
 
@@ -278,9 +278,9 @@ elem.first().text().trim()
     });
 ```
 
-代码中，我在外部范围中定义了一个新变量`xhr`。 这个变量将保存我通过调用`$ .ajax()`来初始化的异步请求对象。 不幸的是，当直接在JavaScript端构建URL时，我无法使用Flask中的`url_for()`，所以在这种情况下，我必须显式连接URL的各个部分。
+代码中，我在外部范围中定义了一个新变量`xhr`。 这个变量将保存我通过调用`$.ajax()`来初始化的异步请求对象。 不幸的是，当直接在JavaScript端构建URL时，我无法使用Flask中的`url_for()`，所以在这种情况下，我必须显式连接URL的各个部分。
 
-`$ .ajax()`调用返回一个promise，这是一个代表异步操作的特殊JavaScript对象。 我可以通过添加`.done(function)`来附加一个完成回调函数，所以一旦请求完成，我的回调函数就会被调用。 回调函数将接收到的响应作为参数，你可以在上面的代码中看到，我将其命名为`data`。 这将是我要放入popover的HTML内容。
+`$.ajax()`调用返回一个promise，这是一个代表异步操作的特殊JavaScript对象。 我可以通过添加`.done(function)`来附加一个完成回调函数，所以一旦请求完成，我的回调函数就会被调用。 回调函数将接收到的响应作为参数，你可以在上面的代码中看到，我将其命名为`data`。 这将是我要放入popover的HTML内容。
 
 但在我们获得弹窗之前，还有一个细节需要处理，以便给予用户一个良好的体验。 回想一下之前添加的逻辑，如果用户在触发鼠标进入事件之后的一秒内将鼠标指针移出`<span>`，将触发取消弹窗的逻辑。 同样的逻辑也需要应用于异步请求，所以我添加了第二个子句来放弃我的`xhr`请求对象（如果存在）。
 
