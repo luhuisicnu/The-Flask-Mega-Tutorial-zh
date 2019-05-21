@@ -91,12 +91,12 @@ API的主要内容将存储在*app/api/users.py*模块中。 下表总结了我�
 
 | HTTP 方法 | 资源 URL | 注释 |
 | --- | --- | --- |
-| `GET` | */api/users/<id>* | 返回一个用户|
+| `GET` | */api/users/\<id\>* | 返回一个用户|
 | `GET` | */api/users* | 返回所有用户的集合 |
-| `GET` | */api/users/<id>/followers* | 返回某个用户的粉丝集合 |
-| `GET` | */api/users/<id>/followed* | 返回某个用户关注的用户集合 |
+| `GET` | */api/users/\<id\>/followers* | 返回某个用户的粉丝集合 |
+| `GET` | */api/users/\<id\>/followed* | 返回某个用户关注的用户集合 |
 | `POST` | */api/users* | 注册一个新用户 |
-| `PUT` | */api/users/<id>* | 修改某个用户|
+| `PUT` | */api/users/\<id\>* | 修改某个用户|
 
 现在我要创建一个模块的框架，其中使用占位符来暂时填充所有的路由：
 
