@@ -4,7 +4,7 @@
 
 这就是应用程序编程接口（API）的能力范畴了。 API是一组HTTP路由，被设计为应用程序中的低级入口点。与定义返回HTML以供Web浏览器使用的路由和视图函数不同，API允许客户端直接使用应用程序的*资源*，从而决定如何通过客户端完全地向用户呈现信息。 例如，Microblog中的API可以向用户提供用户信息和用户动态，并且它还可以允许用户编辑现有动态，但仅限于数据级别，不会将此逻辑与HTML混合。
 
-如果你研究了应用程序中当前定义的所有路由，会注意到其中的几个符合我上面使用的API的定义。 找到它们了吗？ 我说的是返回JSON的几条路由，比如[第十四章](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e5%8d%81%e5%9b%9b%e7%ab%a0%ef%bc%9aAjax.md)中定义的*/translate*路由。 这种路由的内容都以JSON格式编码，并在请求时使用`POST`方法。 此请求的响应也是JSON格式，服务器仅返回所请求的信息，客户端负责将此信息呈现给用户。
+如果你研究了应用程序中当前定义的所有路由，会注意到其中的几个符合我上面使用的API的定义。 找到它们了吗？ 我说的是返回JSON的几条路由，比如[第十四章](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%e7%ac%ac%e5%8d%81%e5%9b%9b%e7%ab%a0%ef%bc%9aAjax.md)中定义的 */translate* 路由。 这种路由的内容都以JSON格式编码，并在请求时使用`POST`方法。 此请求的响应也是JSON格式，服务器仅返回所请求的信息，客户端负责将此信息呈现给用户。
 
 虽然应用程序中的JSON路由具有API的“感觉”，但它们的设计初衷是为支持在浏览器中运行的Web应用程序。 设想一下，如果智能手机APP想要使用这些路由，它将无法使用，因为这需要用户登录，而登录只能通过HTML表单进行。 在本章中，我将展示如何构建不依赖于Web浏览器的API，并且不会假设连接到它们的客户端的类型。
 
@@ -13,7 +13,7 @@
 ## REST API设计风格
 ## REST as a Foundation of API Design
 
-有些人可能会强烈反对上面提到的*/translate*和其他JSON路由是API路由。 其他人可能会同意，但也会认为它们是一个设计糟糕的API。 那么一个精心设计的API有什么特点，为什么上面的JSON路由不是一个好的API路由呢？
+有些人可能会强烈反对上面提到的 */translate* 和其他JSON路由是API路由。 其他人可能会同意，但也会认为它们是一个设计糟糕的API。 那么一个精心设计的API有什么特点，为什么上面的JSON路由不是一个好的API路由呢？
 
 你可能听说过[REST API](https://en.wikipedia.org/wiki/Representational_state_transfer)。 REST（Representational State Transfer）是Roy Fielding在[博士论文](http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)中提出的一种架构。 该架构中，Dr. Fielding以相当抽象和通用的方式展示了REST的六个定义特征。
 
@@ -49,13 +49,13 @@
 
 如果你想知道为什么REST需要无状态服务器，主要原因是无状态服务器非常容易扩展，你只需在负载均衡器后面运行多个服务器实例即可。 如果服务器存储客户端状态，则事情会变得更复杂，因为你必须弄清楚多个服务器如何访问和更新该状态，或者确保给定客户端始终由同一服务器处理，这样的机制通常称为*粘性会话*。
 
-再思考一下本章介绍中讨论的*/translate*路由，就会发现它不能被视为*RESTful*，因为与该路由相关的视图函数依赖于Flask-Login的`@login_required`装饰器， 这会将用户的登录状态存储在Flask用户会话中。
+再思考一下本章介绍中讨论的 */translate* 路由，就会发现它不能被视为*RESTful*，因为与该路由相关的视图函数依赖于Flask-Login的`@login_required`装饰器， 这会将用户的登录状态存储在Flask用户会话中。
 
 ### 统一接口
 
 最后，最重要的，最有争议的，最含糊不清的REST原则是统一接口。 Dr. Fielding列举了REST统一接口的四个特性：唯一资源标识符，资源表示，自描述性消息和超媒体。
 
-唯一资源标识符是通过为每个资源分配唯一的URL来实现的。 例如，与给定用户关联的URL可以是*/api/users/<user-id>*，其中*<user-id>*是在数据库表主键中分配给用户的标识符。 大多数API都能很好地实现这一点。
+唯一资源标识符是通过为每个资源分配唯一的URL来实现的。 例如，与给定用户关联的URL可以是 */api/users/\<user-id\>* ，其中 *\<user-id\>* 是在数据库表主键中分配给用户的标识符。 大多数API都能很好地实现这一点。
 
 资源表示的使用意味着当服务器和客户端交换关于资源的信息时，他们必须使用商定的格式。 对于大多数现代API，JSON格式用于构建资源表示。 API可以选择支持多种资源表示格式，并且在这种情况下，HTTP协议中的*内容协商*选项是客户端和服务器确认格式的机制。
 
@@ -787,7 +787,7 @@ def update_user(id):
 
 请注意，装饰器被添加到除`create_user()`之外的所有API视图函数中，显而易见，这个函数不能使用token认证，因为用户都不存在时，更不会有token了。
 
-如果你直接对上面列出的受token保护的endpoint发起请求，则会得到一个401错误。为了成功访问，你需要添加`Authorization`头部，其值是请求*/api/tokens*获得的token的值。Flask-HTTPAuth期望的是"不记名"token，但是它没有被HTTPie直接支持。就像针对基本认证，HTTPie提供了`--auth`选项来接受用户名和密码，但是token的头部则需要显式地提供了。下面是发送不记名token的格式：
+如果你直接对上面列出的受token保护的endpoint发起请求，则会得到一个401错误。为了成功访问，你需要添加`Authorization`头部，其值是请求 */api/tokens* 获得的token的值。Flask-HTTPAuth期望的是"不记名"token，但是它没有被HTTPie直接支持。就像针对基本认证，HTTPie提供了`--auth`选项来接受用户名和密码，但是token的头部则需要显式地提供了。下面是发送不记名token的格式：
 
 ```
 (venv) $ http GET http://localhost:5000/api/users/1 \
@@ -811,7 +811,7 @@ def revoke_token():
     return '', 204
 ```
 
-客户端可以向*/tokens* URL发送`DELETE`请求，以使token失效。此路由的身份验证是基于token的，事实上，在`Authorization`头部中发送的token就是需要被撤销的。撤销使用了`User`类中的辅助方法，该方法重新设置token过期日期来实现撤销操作。之后提交数据库会话，以确保将更改写入数据库。这个请求的响应没有正文，所以我可以返回一个空字符串。Return语句中的第二个值设置状态代码为204，该代码用于成功请求却没有响应主体的响应。
+客户端可以向 */tokens* URL发送`DELETE`请求，以使token失效。此路由的身份验证是基于token的，事实上，在`Authorization`头部中发送的token就是需要被撤销的。撤销使用了`User`类中的辅助方法，该方法重新设置token过期日期来实现撤销操作。之后提交数据库会话，以确保将更改写入数据库。这个请求的响应没有正文，所以我可以返回一个空字符串。Return语句中的第二个值设置状态代码为204，该代码用于成功请求却没有响应主体的响应。
 
 下面是撤销token的一个HTTPie请求示例：
 
