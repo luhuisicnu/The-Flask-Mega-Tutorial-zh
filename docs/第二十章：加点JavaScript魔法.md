@@ -153,7 +153,7 @@ jQuery JavaScript库作为Bootstrap的依赖项加载，因此我将利用它。
 ...
                 {% set user_link %}
                     <span class="user_popup">
-                        <a href="url_for('main.user', username=post.author.username)">
+                        <a href="{{ url_for('main.user', username=post.author.username) }}">
                             {{ post.author.username }}
                         </a>
                     </span>
