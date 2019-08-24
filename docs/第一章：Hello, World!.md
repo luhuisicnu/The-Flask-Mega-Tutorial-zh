@@ -170,6 +170,10 @@ microblog/
 ```
     http://localhost:5000/index
 ```
+如果你想在局域网内访问，通过下面命令可以做到（如果你想了解更多`run`参数，请参考 [flask run](https://dormousehole.readthedocs.io/en/stable/api.html#flask.Flask.run) :
+```
+(venv) $ flask run --host 0.0.0.0 --port 6000 
+```
 
 应用程序路由映射执行了吗？ 第一个URL映射到`/`，而第二个映射到`/ index`。 这两个路由都与应用程序中唯一的视图函数相关联，所以它们产生相同的输出，即函数返回的字符串。 如果你输入任何其他网址，则会出现错误，因为只有这两个URL被应用程序识别。
 
