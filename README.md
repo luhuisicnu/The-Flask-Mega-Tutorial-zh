@@ -13,6 +13,10 @@
 
 欢迎大家分享本教程给更多人，一起讨论学习和提高。
 
+3. 应大家要求，创建了gitbook
+
+https://luhuisicnu.gitbook.io/the-flask-mega-tutorial-zh/
+
 
 ## 目录
 * [第一章：Hello, World!](https://github.com/luhuisicnu/The-Flask-Mega-Tutorial-zh/blob/master/docs/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9AHello%2C%20World!.md)
