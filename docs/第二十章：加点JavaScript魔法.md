@@ -6,7 +6,7 @@
 
 社交网站的常见用户交互模式是，当你将鼠标悬停在用户的名称上时，可以在弹出窗口中显示用户的主要信息。 如果你从未注意到这一点，请访问Twitter，Facebook，LinkedIn或任何其他主要社交网站，当你看到用户名时，只需将鼠标指针放在上面几秒钟即可看到弹出窗口。 本章将致力于为Microblog实现该功能，你可以在下面看到预览效果：
 
-![User Popup](http://upload-images.jianshu.io/upload_images/4961528-d34608ca599c0ca2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![User Popup](https://camo.githubusercontent.com/4b7a41fff6f962323aa6f87898693e5a30f6e211/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f343936313532382d643334363038636135393963306361322e706e673f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970253743696d61676556696577322f322f772f31323430)
 
 *本章的GitHub链接为：[Browse](https://github.com/miguelgrinberg/microblog/tree/v0.20), [Zip](https://github.com/miguelgrinberg/microblog/archive/v0.20.zip), [Diff](https://github.com/miguelgrinberg/microblog/compare/v0.19...v0.20).*
 
