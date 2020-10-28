@@ -173,7 +173,6 @@ microblog/
 
 应用程序路由映射执行了吗？ 第一个URL映射到`/`，而第二个映射到`/ index`。 这两个路由都与应用程序中唯一的视图函数相关联，所以它们产生相同的输出，即函数返回的字符串。 如果你输入任何其他网址，则会出现错误，因为只有这两个URL被应用程序识别。
 
-![Hello, World!](http://upload-images.jianshu.io/upload_images/4961528-328651893e709b13.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ![Hello, World!](https://camo.githubusercontent.com/551a93800bd8c03f88eebc6ff5f3bf28451eb7bc/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f343936313532382d333238363531383933653730396231332e706e673f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970253743696d61676556696577322f322f772f31323430)
 
 完成演示之后，你可以按下Ctrl-C来停止Web服务。
